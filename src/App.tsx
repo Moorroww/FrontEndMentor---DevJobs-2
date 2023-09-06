@@ -1,8 +1,9 @@
 import React from "react";
-import { WrapperS } from "./App.css";
+import { ThemeProvider } from "styled-components";
+import { theme } from "./Styles/theme";
 
 export const App = () => {
-  return <WrapperS>WRAPP</WrapperS>;
+  return <ThemeProvider theme={theme}></ThemeProvider>;
 };
 
 export default App;
