@@ -1,9 +1,10 @@
 import { styled } from "styled-components";
 
-export const ButtonMain = styled.button`
+export const ButtonMain = styled.button<{ padding?: string }>`
   background-color: ${({ theme }) => theme.accentViolet};
   color: ${({ theme }) => theme.white};
-  padding: 1.6rem 3rem;
+  /* padding: 1.6rem 3rem; */
+  padding: ${({ padding }) => (padding ? padding : 0)};
   font-weight: bold;
   font-family: inherit;
   border-radius: 0.5rem;

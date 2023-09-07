@@ -20,7 +20,7 @@ export const Header = ({ themeToggler }) => {
             id="toggle"
             type="checkbox"
             onClick={themeToggler[0]}
-            //   checked={themeToggler[1] === "dark" ? true : false}
+            // checked={themeToggler[1] === "dark" ? true : false}
           />
           <label className="toggle-label" htmlFor="toggle"></label>
         </div>
