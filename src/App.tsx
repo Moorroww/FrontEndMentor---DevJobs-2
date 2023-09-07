@@ -1,14 +1,23 @@
 import React from "react";
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import { GlobalStyles } from "./Styles/boilerPlate.css.tsx";
 import { ThemeProvider } from "styled-components";
-import { theme } from "./Styles/theme";
+import { lightTheme, darkTheme } from "./Styles/theme";
+import { useDarkMode } from "./Styles/useDarkMode.tsx";
+
 import { HomePage } from "./Components/HomePage/HomePage";
 import { CompanyDetailPage } from "./Components/CompanyDetailPage/CompanyDetailPage";
 import { ErrorPage } from "./Components/ErrorPage/ErrorPage";
 
 export const App = () => {
+  const [theme, themeToggler] = useDarkMode();
+  const themeMode = theme === "light" ? lightTheme : darkTheme;
+
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={themeMode}>
+      <GlobalStyles />
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />}></Route>

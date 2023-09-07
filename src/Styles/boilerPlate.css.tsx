@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyles = createGlobalStyle`
+
 
 * {
   border: none;
@@ -18,8 +21,8 @@ html {
   /* display: flex;
   flex-direction: column;
   justify-content: center; */
-  /* background-color: #242424;
-  color: #f6f6f6; */
+  background-color: ${({ theme }) => theme.body};
+  color: ${({ theme }) => theme.fontMain};
   font-family: "Kumbh Sans", sans-serif;
 }
 
@@ -53,3 +56,4 @@ h4 {
   font-size: 1.4rem;
   line-height: 1.8rem;
 }
+  `;
