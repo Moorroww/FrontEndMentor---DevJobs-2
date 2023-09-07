@@ -2,7 +2,7 @@ import React from "react";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import { GlobalStyles } from "./Styles/boilerPlate.css.tsx";
+import { GlobalStyles } from "./Styles/globalStyles.css.tsx";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./Styles/theme";
 import { useDarkMode } from "./Styles/useDarkMode.tsx";
@@ -20,7 +20,10 @@ export const App = () => {
       <GlobalStyles />
       <Router>
         <Routes>
-          <Route path="/" element={<HomePage />}></Route>
+          <Route
+            path="/"
+            element={<HomePage themeToggler={[themeToggler, themeMode]} />}
+          ></Route>
           <Route
             path="/company-detailed-page"
             element={<CompanyDetailPage />}

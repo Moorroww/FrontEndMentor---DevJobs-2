@@ -26,7 +26,7 @@ html {
   font-family: "Kumbh Sans", sans-serif;
 }
 
-body {
+body, p {
   font-size: 1.6rem;
   line-height: 2.6rem;
 }

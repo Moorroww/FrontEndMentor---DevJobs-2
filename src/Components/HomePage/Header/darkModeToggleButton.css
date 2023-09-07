@@ -1,0 +1,45 @@
+/* Button credits - https://uiverse.io/ozgeozkaraa01/evil-cheetah-7 */
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 4.8rem;
+  height: 2.4rem;
+}
+
+.toggle-input {
+  display: none;
+}
+
+.toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4.8rem;
+  height: 2.4rem;
+  border-radius: 17px;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+
+.toggle-label:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 3px;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  background-color: #5964e0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease;
+}
+
+.toggle-input:checked + .toggle-label {
+  background-color: #ffffff;
+}
+
+.toggle-input:checked + .toggle-label:before {
+  transform: translateX(26px);
+}
