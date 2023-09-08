@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+
+import { ToggleThemeFunction } from "../../../Types/types";
 
 import { StyledHeaderContainer, ThemeToggleBox } from "./Header.css";
 import "./darkModeToggleButton.css";
@@ -7,7 +9,9 @@ import logoImg from "../../../Assets/desktop icons/logo.svg";
 import sunIcon from "../../../Assets/desktop icons/icon-sun.svg";
 import moonIcon from "../../../Assets/desktop icons/icon-moon.svg";
 
-export const Header = ({ themeToggler }) => {
+export const Header = ({ toggleTheme }: ToggleThemeFunction) => {
+  const [localTheme, setLocalTheme] = useState(localStorage.getItem("theme"));
+
   return (
     <StyledHeaderContainer>
       <img src={logoImg} alt="devjobs logo" />
@@ -19,8 +23,11 @@ export const Header = ({ themeToggler }) => {
             className="toggle-input"
             id="toggle"
             type="checkbox"
-            onClick={themeToggler[0]}
-            // checked={themeToggler[1] === "dark" ? true : false}
+            onChange={() => {
+              toggleTheme();
+              setLocalTheme(localStorage.getItem("theme"));
+            }}
+            checked={localTheme === "dark"}
           />
           <label className="toggle-label" htmlFor="toggle"></label>
         </div>

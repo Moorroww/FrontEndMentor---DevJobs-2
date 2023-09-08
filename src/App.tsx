@@ -22,7 +22,7 @@ export const App = () => {
         <Routes>
           <Route
             path="/"
-            element={<HomePage themeToggler={[themeToggler, themeMode]} />}
+            element={<HomePage toggleTheme={themeToggler} />}
           ></Route>
           <Route
             path="/company-detailed-page"
