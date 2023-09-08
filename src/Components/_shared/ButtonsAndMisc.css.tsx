@@ -1,10 +1,13 @@
 import { styled } from "styled-components";
 
-export const ButtonMain = styled.button<{ padding?: string }>`
+export const StyledButtonMain = styled.button<{
+  paddingX?: string;
+  paddingY?: string;
+}>`
   background-color: ${({ theme }) => theme.accentViolet};
   color: ${({ theme }) => theme.white};
-  /* padding: 1.6rem 3rem; */
-  padding: ${({ padding }) => (padding ? padding : 0)};
+  padding-inline: ${({ paddingX }) => (paddingX ? paddingX : 0)}; /* paddingX */
+  padding-block: ${({ paddingY }) => (paddingY ? paddingY : 0)}; /* paddingY */
   font-weight: bold;
   font-family: inherit;
   border-radius: 0.5rem;
@@ -16,7 +19,7 @@ export const ButtonMain = styled.button<{ padding?: string }>`
   }
 `;
 
-export const ButtonSecondary = styled.button`
+export const StyledButtonSecondary = styled.button`
   background-color: ${({ theme }) => theme.secondaryButtonBg};
   color: ${({ theme }) => theme.secondaryButtonFont};
   padding: 1.6rem 2rem;

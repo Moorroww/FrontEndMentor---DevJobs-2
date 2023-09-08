@@ -22,6 +22,8 @@ export const lightTheme = {
   secondaryButtonBg: "#eff0fc",
   secondaryButtonBgHover: "#c5c9f4",
   secondaryButtonFont: "#5964E0",
+
+  searchBorder: "#e2e6ea",
 };
 
 export const darkTheme = {
@@ -37,4 +39,6 @@ export const darkTheme = {
   secondaryButtonBg: "#303642",
   secondaryButtonBgHover: "#696e76",
   secondaryButtonFont: "#ffffff",
+
+  searchBorder: "#2a3442",
 };
