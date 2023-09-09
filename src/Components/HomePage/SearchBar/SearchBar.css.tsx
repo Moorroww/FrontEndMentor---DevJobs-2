@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledSearchBarContainer = styled.div`
+export const StyledSearchBarContainer = styled.nav`
   background-color: ${({ theme }) => theme.card};
   color: ${({ theme }) => theme.fontMain};
   margin-inline: 2.4rem;
@@ -27,6 +27,14 @@ export const StyledSearchBarContainer = styled.div`
 
   @media (width>767px) {
     grid-template-columns: 1fr 1fr 1fr;
+    margin-inline: 4rem;
+  }
+
+  @media (width>1439px) {
+    margin-inline: 16.5rem;
+    width: 100%;
+    max-width: 1440px;
+    justify-self: center;
   }
 `;
 
