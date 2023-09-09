@@ -3,8 +3,11 @@ import { styled } from "styled-components";
 export const StyledButtonMain = styled.button<{
   paddingX?: string;
   paddingY?: string;
+  bgColor?: string;
+  hoverColor?: string;
 }>`
-  background-color: ${({ theme }) => theme.accentViolet};
+  background-color: ${({ bgColor, theme }) =>
+    bgColor ? bgColor : theme.accentViolet};
   color: ${({ theme }) => theme.white};
   padding-inline: ${({ paddingX }) => (paddingX ? paddingX : 0)}; /* paddingX */
   padding-block: ${({ paddingY }) => (paddingY ? paddingY : 0)}; /* paddingY */
@@ -14,7 +17,8 @@ export const StyledButtonMain = styled.button<{
   transition: 0.2s all ease;
 
   &:hover {
-    background-color: ${({ theme }) => theme.accentLightViolet};
+    background-color: ${({ hoverColor, theme }) =>
+      hoverColor ? hoverColor : theme.accentLightViolet};
     cursor: pointer;
   }
 `;

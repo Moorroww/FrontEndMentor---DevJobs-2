@@ -14,6 +14,7 @@ export const GlobalStyles = createGlobalStyle`
 *::before,
 *::after {
   box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
 }
 
 html {
@@ -23,7 +24,6 @@ html {
   justify-content: center; */
   background-color: ${({ theme }) => theme.body};
   color: ${({ theme }) => theme.fontMain};
-  font-family: "Kumbh Sans", sans-serif;
 }
 
 body, p {
