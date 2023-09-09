@@ -31,9 +31,9 @@ export const StyledSearchBarContainer = styled.nav`
   }
 
   @media (width>1439px) {
-    margin-inline: 16.5rem;
+    margin-inline: 16.5rem !important;
     width: 100%;
-    max-width: 1440px;
+    max-width: 1110px;
     justify-self: center;
   }
 `;
