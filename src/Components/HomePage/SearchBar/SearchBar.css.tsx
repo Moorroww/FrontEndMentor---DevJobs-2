@@ -82,8 +82,8 @@ export const StyledLocationInputLabel = styled.label`
 export const StyledCheckboxLabel = styled.label`
   display: none;
 
-  input {
-    background-color: red;
+  label {
+    background-color: ${({ theme }) => theme.searchBorder};
   }
 
   & span {
