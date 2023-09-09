@@ -9,9 +9,12 @@ export const StyledSearchBarContainer = styled.div`
   position: relative;
   top: -4rem;
   padding: 1.6rem 2rem;
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
 
   & > label {
     /* background-color: red; */
@@ -20,6 +23,10 @@ export const StyledSearchBarContainer = styled.div`
 
   &::placeholder {
     color: #8c9096;
+  }
+
+  @media (width>767px) {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 `;
 
@@ -108,6 +115,7 @@ export const StyledButtonsBox = styled.button`
   display: flex;
   align-items: center;
   gap: 0.8rem;
+  justify-self: end;
 
   @media (width>767px) {
     gap: 2.8rem;
