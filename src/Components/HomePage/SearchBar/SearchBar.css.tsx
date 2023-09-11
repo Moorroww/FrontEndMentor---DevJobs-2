@@ -133,6 +133,8 @@ export const StyledFilterButton = styled.button`
   font-family: inherit;
   border-radius: 0.5rem;
   transition: 0.2s all ease;
+  width: 4.8rem;
+  height: 4.8rem;
 
   &:hover {
     cursor: pointer;
@@ -147,12 +149,11 @@ export const StyledSearchButton = styled.button`
   background-color: ${({ theme }) => theme.accentViolet};
   color: ${({ theme }) => theme.white};
   padding-inline: 1.4rem;
-  padding-block: 1.6rem;
+  padding-block: 1.4rem;
   font-weight: bold;
   font-family: inherit;
   border-radius: 0.5rem;
   transition: 0.2s all ease;
-
   &:hover {
     background-color: ${({ theme }) => theme.accentLightViolet};
     cursor: pointer;
@@ -163,6 +164,7 @@ export const StyledSearchButton = styled.button`
     font-weight: bold;
   }
   @media (width>767px) {
+    padding-block: 1.6rem;
     & img {
       display: none;
     }

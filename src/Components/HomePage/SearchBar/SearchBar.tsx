@@ -37,12 +37,10 @@ export const SearchBar = () => {
         <StyledInput id="locationFilter" placeholder="Filter by location..." />
       </StyledLocationInputLabel>
       <StyledButtonsBox>
-        <StyledFilterButton>
-          <img
-            src={filterIcon}
-            alt="filter icon"
-            onClick={() => setMobileFilterVisible(!mobileFilterVisible)}
-          />
+        <StyledFilterButton
+          onClick={() => setMobileFilterVisible(!mobileFilterVisible)}
+        >
+          <img src={filterIcon} alt="filter icon" />
         </StyledFilterButton>
 
         <StyledCheckboxLabel>
