@@ -101,6 +101,17 @@ export const StyledCheckboxLabel = styled.label`
     font-weight: bold;
     color: ${({ theme }) => theme.fontMain};
     cursor: pointer;
+    text-overflow: ellipsis;
+    display: flex;
+    gap: 0.4rem;
+  }
+
+  & span span {
+    display: none;
+
+    @media (width>1439px) {
+      display: flex;
+    }
   }
 
   @media (width>767px) {
@@ -154,6 +165,7 @@ export const StyledSearchButton = styled.button`
   font-family: inherit;
   border-radius: 0.5rem;
   transition: 0.2s all ease;
+
   &:hover {
     background-color: ${({ theme }) => theme.accentLightViolet};
     cursor: pointer;
@@ -164,6 +176,7 @@ export const StyledSearchButton = styled.button`
     font-weight: bold;
   }
   @media (width>767px) {
+    font-size: 1.6rem;
     padding-block: 1.6rem;
     & img {
       display: none;

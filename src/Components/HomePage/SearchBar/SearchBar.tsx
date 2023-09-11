@@ -46,7 +46,9 @@ export const SearchBar = () => {
         <StyledCheckboxLabel>
           <input type="checkbox" id="cbx" className="hidden-xs-up" />
           <label htmlFor="cbx" className="cbx"></label>
-          <span>Full Time</span>
+          <span>
+            Full Time <span>Only</span>
+          </span>
         </StyledCheckboxLabel>
 
         <StyledSearchButton>
