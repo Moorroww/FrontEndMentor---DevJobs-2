@@ -9,15 +9,11 @@ export const StyledSearchBarContainer = styled.nav`
   position: relative;
   top: -4rem;
   padding: 1.6rem 2rem;
-  /* display: flex;
-  align-items: center;
-  justify-content: space-between; */
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-content: center;
 
   & > label {
-    /* background-color: red; */
     margin-right: 2.4rem;
   }
 
@@ -71,10 +67,6 @@ export const StyledLocationInputLabel = styled.label`
     margin-right: 1.6rem;
   }
 
-  & input {
-    max-width: 13.5rem !important;
-  }
-
   @media (width>767px) {
     display: flex;
     height: 8rem;
@@ -114,7 +106,6 @@ export const StyledInput = styled.input`
   outline: none;
   width: 100%;
   font-size: 1.6rem;
-  /* max-width: 10.4rem; */
   text-overflow: ellipsis;
 `;
 
@@ -127,6 +118,8 @@ export const StyledButtonsBox = styled.button`
 
   @media (width>767px) {
     gap: 2.8rem;
+    width: 100%;
+    justify-content: space-between;
   }
 `;
 

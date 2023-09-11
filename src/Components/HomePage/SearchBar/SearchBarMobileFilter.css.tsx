@@ -42,6 +42,7 @@ export const StyledSearchButton = styled.button`
   padding-block: 1.6rem;
   font-weight: bold;
   font-family: inherit;
+  font-size: 1.6rem;
   border-radius: 0.5rem;
   transition: 0.2s all ease;
   width: 100%;
