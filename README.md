@@ -65,6 +65,8 @@ Users should be able to:
 ## Git Branches
 
 DevJ-0: Routing, organisation of files etc.  
-DevJ-1: Shared/Reusable Styles, buttons, main top bar (navigation)  
-DevJ-2: Theme configuration  
-DevJ-3: Search bar with save to localStorage
+DevJ-1: Shared/Reusable Styles, buttons, main top bar (navigation).  
+DevJ-2: Theme configuration.  
+DevJ-3: Search bar main and mobile version.  
+DevJ-4: Company cards rendering.  
+DevJ-5: Search bar logic.
