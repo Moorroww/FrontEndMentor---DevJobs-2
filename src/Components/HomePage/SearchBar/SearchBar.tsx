@@ -17,8 +17,12 @@ import searchIcon from "../../../Assets/desktop icons/icon-search.svg";
 import searchIconWhite from "../../../Assets/desktop icons/icon-search-white.svg";
 import locationIcon from "../../../Assets/desktop icons/icon-location.svg";
 import filterIcon from "../../../Assets/mobile icons/icon-filter.svg";
+import { SearchBarMobileFilter } from "./SearchBarMobileFilter";
 
 export const SearchBar = () => {
+  const [mobileFilterVisible, setMobileFilterVisible] =
+    useState<boolean>(false);
+
   return (
     <StyledSearchBarContainer>
       <StyledMainInputLabel htmlFor="mainFilter">
@@ -28,15 +32,17 @@ export const SearchBar = () => {
           placeholder="Filter by title, companies, expertise…"
         />
       </StyledMainInputLabel>
-
       <StyledLocationInputLabel htmlFor="locationFilter">
         <img src={locationIcon} alt="" />
         <StyledInput id="locationFilter" placeholder="Filter by location..." />
       </StyledLocationInputLabel>
-
       <StyledButtonsBox>
         <StyledFilterButton>
-          <img src={filterIcon} alt="filter icon" />
+          <img
+            src={filterIcon}
+            alt="filter icon"
+            onClick={() => setMobileFilterVisible(!mobileFilterVisible)}
+          />
         </StyledFilterButton>
 
         <StyledCheckboxLabel>
@@ -50,6 +56,13 @@ export const SearchBar = () => {
           <span>Search</span>
         </StyledSearchButton>
       </StyledButtonsBox>
+
+      {mobileFilterVisible && (
+        <SearchBarMobileFilter
+          mobileFilterVisible={mobileFilterVisible}
+          setMobileFilterVisible={setMobileFilterVisible}
+        />
+      )}
     </StyledSearchBarContainer>
   );
 };
