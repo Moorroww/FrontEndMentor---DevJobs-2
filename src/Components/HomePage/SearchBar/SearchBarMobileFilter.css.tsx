@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledMobileFilterContainer = styled.div`
-  z-index: 2;
+  z-index: 3;
   position: fixed;
   background-color: ${({ theme }) => theme.card};
   padding: 2.4rem;
@@ -80,6 +80,7 @@ export const StyledCheckboxLabel = styled.label`
 `;
 
 export const StyledDarkBg = styled.div`
+  z-index: 2;
   position: fixed;
   top: 0;
   left: 0;

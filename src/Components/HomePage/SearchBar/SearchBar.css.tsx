@@ -143,7 +143,6 @@ export const StyledFilterButton = styled.button`
   font-weight: bold;
   font-family: inherit;
   border-radius: 0.5rem;
-  transition: 0.2s all ease;
   width: 4.8rem;
   height: 4.8rem;
 
