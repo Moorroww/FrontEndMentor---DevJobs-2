@@ -79,6 +79,16 @@ export const StyledLocationInputLabel = styled.label`
   }
 `;
 
+export const StyledInput = styled.input`
+  background-color: inherit;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 1.6rem;
+  text-overflow: ellipsis;
+  color: ${({ theme }) => theme.fontMain};
+`;
+
 export const StyledCheckboxLabel = styled.label`
   display: none;
 
@@ -98,15 +108,6 @@ export const StyledCheckboxLabel = styled.label`
     align-items: center;
     gap: 1.6rem;
   }
-`;
-
-export const StyledInput = styled.input`
-  background-color: inherit;
-  border: none;
-  outline: none;
-  width: 100%;
-  font-size: 1.6rem;
-  text-overflow: ellipsis;
 `;
 
 export const StyledButtonsBox = styled.div`
