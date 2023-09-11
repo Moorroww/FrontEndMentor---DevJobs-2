@@ -109,7 +109,7 @@ export const StyledInput = styled.input`
   text-overflow: ellipsis;
 `;
 
-export const StyledButtonsBox = styled.button`
+export const StyledButtonsBox = styled.div`
   background-color: inherit;
   display: flex;
   align-items: center;
