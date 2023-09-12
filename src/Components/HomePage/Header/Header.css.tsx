@@ -11,6 +11,8 @@ export const StyledHeaderContainer = styled.header`
   align-items: center;
   background-image: url(${bgImgMobile});
   background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr;
 
   @media (width>767px) {
     padding: 4.2rem 4rem 8.6rem 4rem;
@@ -23,6 +25,18 @@ export const StyledHeaderContainer = styled.header`
     padding: 4.4rem 16.5rem 8.6rem 16.5rem;
     background-image: url(${bgImgDesktop});
     min-height: 16rem;
+  }
+`;
+
+export const StyledHeaderBox = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  justify-self: center;
+
+  @media (width>1439px) {
+    max-width: 1110px;
   }
 `;
 
