@@ -1,5 +1,7 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { SearchContext } from "../HomePage";
+import { useSearchParams } from "react-router-dom";
 
 import {
   StyledButtonsBox,
@@ -23,6 +25,34 @@ export const SearchBar = () => {
   const [mobileFilterVisible, setMobileFilterVisible] =
     useState<boolean>(false);
 
+  const { searchFilter } = useContext(SearchContext) as {
+    searchFilter: {
+      mainSearch: string;
+      locationSearch: string;
+      contractType: string;
+    };
+  };
+  const [mainSearch, setMainSearch] = useState<string>("");
+  const [locationSearch, setLocationSearch] = useState<string>("");
+  const [contractType, setContractType] = useState<boolean>(false);
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const proceedSearch = (): void => {
+    searchFilter.mainSearch = mainSearch;
+
+    searchFilter.locationSearch = locationSearch;
+
+    contractType == true
+      ? (searchFilter.contractType = "Full")
+      : (searchFilter.contractType = "Part");
+
+    setSearchParams({
+      mainSearch: mainSearch,
+      locationSearch: locationSearch,
+      contractType: contractType.toString(),
+    });
+  };
+
   return (
     <StyledSearchBarContainer>
       <StyledMainInputLabel htmlFor="mainFilter">
@@ -30,11 +60,16 @@ export const SearchBar = () => {
         <StyledInput
           id="mainFilter"
           placeholder="Filter by title, companies, expertise…"
+          onChange={(e) => setMainSearch(e.target.value)}
         />
       </StyledMainInputLabel>
       <StyledLocationInputLabel htmlFor="locationFilter">
         <img src={locationIcon} alt="" />
-        <StyledInput id="locationFilter" placeholder="Filter by location..." />
+        <StyledInput
+          id="locationFilter"
+          placeholder="Filter by location..."
+          onChange={(e) => setLocationSearch(e.target.value)}
+        />
       </StyledLocationInputLabel>
       <StyledButtonsBox>
         <StyledFilterButton
@@ -44,14 +79,19 @@ export const SearchBar = () => {
         </StyledFilterButton>
 
         <StyledCheckboxLabel>
-          <input type="checkbox" id="cbx" className="hidden-xs-up" />
+          <input
+            type="checkbox"
+            id="cbx"
+            className="hidden-xs-up"
+            onChange={() => setContractType(!contractType)}
+          />
           <label htmlFor="cbx" className="cbx"></label>
           <span>
             Full Time <span>Only</span>
           </span>
         </StyledCheckboxLabel>
 
-        <StyledSearchButton>
+        <StyledSearchButton onClick={proceedSearch}>
           <img src={searchIconWhite} alt="search icon" />
           <span>Search</span>
         </StyledSearchButton>
