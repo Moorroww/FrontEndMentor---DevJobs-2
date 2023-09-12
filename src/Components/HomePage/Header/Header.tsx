@@ -2,7 +2,11 @@ import React, { useState } from "react";
 
 import { ToggleThemeFunction } from "../../../Types/types";
 
-import { StyledHeaderContainer, ThemeToggleBox } from "./Header.css";
+import {
+  StyledHeaderContainer,
+  StyledHeaderBox,
+  ThemeToggleBox,
+} from "./Header.css";
 import "./darkModeToggleButton.css";
 
 import logoImg from "../../../Assets/desktop icons/logo.svg";
@@ -14,25 +18,27 @@ export const Header = ({ toggleTheme }: ToggleThemeFunction) => {
 
   return (
     <StyledHeaderContainer>
-      <img src={logoImg} alt="devjobs logo" />
+      <StyledHeaderBox>
+        <img src={logoImg} alt="devjobs logo" />
 
-      <ThemeToggleBox>
-        <img src={sunIcon} alt="sun icon" />
-        <div className="toggle-switch">
-          <input
-            className="toggle-input"
-            id="toggle"
-            type="checkbox"
-            onChange={() => {
-              toggleTheme();
-              setLocalTheme(localStorage.getItem("theme"));
-            }}
-            checked={localTheme === "dark"}
-          />
-          <label className="toggle-label" htmlFor="toggle"></label>
-        </div>
-        <img src={moonIcon} alt="moon icon" />
-      </ThemeToggleBox>
+        <ThemeToggleBox>
+          <img src={sunIcon} alt="sun icon" />
+          <div className="toggle-switch">
+            <input
+              className="toggle-input"
+              id="toggle"
+              type="checkbox"
+              onChange={() => {
+                toggleTheme();
+                setLocalTheme(localStorage.getItem("theme"));
+              }}
+              checked={localTheme === "dark"}
+            />
+            <label className="toggle-label" htmlFor="toggle"></label>
+          </div>
+          <img src={moonIcon} alt="moon icon" />
+        </ThemeToggleBox>
+      </StyledHeaderBox>
     </StyledHeaderContainer>
   );
 };
