@@ -1,19 +1,27 @@
-import React from "react";
+import React, { createContext } from "react";
 
 import { ToggleThemeFunction } from "../../Types/types";
 
 import { SearchBar } from "./SearchBar/SearchBar";
 
 import { HomePageContainer } from "./HomePage.css";
-import { Header } from "./Header/Header";
 import { CardsSection } from "./CardsSection/CardsSection";
 
-export const HomePage = ({ toggleTheme }: ToggleThemeFunction) => {
+export const SearchContext = createContext();
+
+export const HomePage = () => {
+  const searchFilter = {
+    mainSearch: "",
+    locationSearch: "",
+    contractType: "",
+  };
+
   return (
     <HomePageContainer>
-      <Header toggleTheme={toggleTheme} />
-      <SearchBar />
-      <CardsSection />
+      <SearchContext.Provider value={{ searchFilter }}>
+        <SearchBar />
+        <CardsSection />
+      </SearchContext.Provider>
     </HomePageContainer>
   );
 };

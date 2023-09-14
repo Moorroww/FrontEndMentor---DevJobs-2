@@ -14,9 +14,19 @@ import locationIcon from "../../../Assets/desktop icons/icon-location.svg";
 export const SearchBarMobileFilter = ({
   mobileFilterVisible,
   setMobileFilterVisible,
+  locationSearch,
+  setLocationSearch,
+  contractType,
+  setContractType,
+  proceedSearch,
 }: {
   mobileFilterVisible: boolean;
   setMobileFilterVisible: (value: boolean) => void;
+  locationSearch: string;
+  setLocationSearch: (value: string) => void;
+  contractType: boolean;
+  setContractType: (value: boolean) => void;
+  proceedSearch: () => void;
 }) => {
   return (
     <div>
@@ -26,16 +36,29 @@ export const SearchBarMobileFilter = ({
           <StyledInput
             id="locationFilterMobile"
             placeholder="Filter by location..."
+            onChange={(e) => setLocationSearch(e.target.value)}
+            value={locationSearch}
           />
         </StyledLocationInputLabelMobile>
 
         <StyledCheckboxLabel>
-          <input type="checkbox" id="cbx" className="hidden-xs-up" />
+          <input
+            type="checkbox"
+            id="cbx"
+            className="hidden-xs-up"
+            onChange={() => setContractType(!contractType)}
+            checked={contractType}
+          />
           <label htmlFor="cbx" className="cbx"></label>
           <span>Full Time</span>
         </StyledCheckboxLabel>
 
-        <StyledSearchButton>
+        <StyledSearchButton
+          onClick={() => {
+            setMobileFilterVisible(!mobileFilterVisible);
+            proceedSearch();
+          }}
+        >
           <span>Search</span>
         </StyledSearchButton>
       </StyledMobileFilterContainer>

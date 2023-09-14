@@ -1,24 +1,24 @@
 import { styled } from "styled-components";
 
 export const StyledButtonMain = styled.button<{
-  paddingX?: string;
-  paddingY?: string;
-  bgColor?: string;
-  hoverColor?: string;
+  paddingx?: string;
+  paddingy?: string;
+  bgcolor?: string;
+  hovercolor?: string;
 }>`
-  background-color: ${({ bgColor, theme }) =>
-    bgColor ? bgColor : theme.accentViolet};
+  background-color: ${({ bgcolor, theme }) =>
+    bgcolor ? bgcolor : theme.accentViolet};
   color: ${({ theme }) => theme.white};
-  padding-inline: ${({ paddingX }) => (paddingX ? paddingX : 0)}; /* paddingX */
-  padding-block: ${({ paddingY }) => (paddingY ? paddingY : 0)}; /* paddingY */
+  padding-inline: ${({ paddingx }) => (paddingx ? paddingx : 0)};
+  padding-block: ${({ paddingy }) => (paddingy ? paddingy : 0)};
   font-weight: bold;
   font-family: inherit;
   border-radius: 0.5rem;
   transition: 0.2s all ease;
 
   &:hover {
-    background-color: ${({ hoverColor, theme }) =>
-      hoverColor ? hoverColor : theme.accentLightViolet};
+    background-color: ${({ hovercolor, theme }) =>
+      hovercolor ? hovercolor : theme.accentLightViolet};
     cursor: pointer;
   }
 `;

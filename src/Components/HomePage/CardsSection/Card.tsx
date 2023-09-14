@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router";
 
 import {
   StyledCard,
@@ -9,10 +10,30 @@ import {
   StyledShortInfoRow,
 } from "./Card.css";
 
-export const Card = ({ company }) => {
+export const Card = ({
+  company,
+}: {
+  company: {
+    id: string;
+    logoBackground: string;
+    logo: string;
+    postedAt: string;
+    contract: string;
+    position: string;
+    company: string;
+    location: string;
+  };
+}) => {
+  const toCompanyDetailPage = useNavigate();
+
   return (
-    <StyledCard>
-      <StyledCompanyLogoBox bgColor={company.logoBackground}>
+    <StyledCard
+      onClick={() => {
+        toCompanyDetailPage("/company-detailed-page");
+        localStorage.setItem("CompanyID", company.id);
+      }}
+    >
+      <StyledCompanyLogoBox bgcolor={company.logoBackground}>
         <img src={company?.logo} alt="" />
       </StyledCompanyLogoBox>
       <StyledShortInfoRow>

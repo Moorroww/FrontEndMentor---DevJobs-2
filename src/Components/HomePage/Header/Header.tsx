@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router";
 
 import { ToggleThemeFunction } from "../../../Types/types";
 
@@ -15,11 +16,12 @@ import moonIcon from "../../../Assets/desktop icons/icon-moon.svg";
 
 export const Header = ({ toggleTheme }: ToggleThemeFunction) => {
   const [localTheme, setLocalTheme] = useState(localStorage.getItem("theme"));
+  const toMainPage = useNavigate();
 
   return (
     <StyledHeaderContainer>
       <StyledHeaderBox>
-        <img src={logoImg} alt="devjobs logo" />
+        <img src={logoImg} alt="devjobs logo" onClick={() => toMainPage("/")} />
 
         <ThemeToggleBox>
           <img src={sunIcon} alt="sun icon" />
