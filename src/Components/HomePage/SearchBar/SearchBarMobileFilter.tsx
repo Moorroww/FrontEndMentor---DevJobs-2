@@ -26,7 +26,7 @@ export const SearchBarMobileFilter = ({
   setLocationSearch: (value: string) => void;
   contractType: boolean;
   setContractType: (value: boolean) => void;
-  proceedSearch: any;
+  proceedSearch: () => void;
 }) => {
   return (
     <div>
