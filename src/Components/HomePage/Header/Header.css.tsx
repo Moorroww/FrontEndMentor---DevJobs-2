@@ -35,6 +35,10 @@ export const StyledHeaderBox = styled.div`
   align-items: center;
   justify-self: center;
 
+  & img {
+    cursor: pointer;
+  }
+
   @media (width>1439px) {
     max-width: 1110px;
   }
