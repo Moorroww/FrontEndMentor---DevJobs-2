@@ -63,6 +63,7 @@ export const SearchBar = () => {
           id="locationFilter"
           placeholder="Filter by location..."
           onChange={(e) => setLocationSearch(e.target.value)}
+          value={locationSearch}
         />
       </StyledLocationInputLabel>
       <StyledButtonsBox>
@@ -78,6 +79,7 @@ export const SearchBar = () => {
             id="cbx"
             className="hidden-xs-up"
             onChange={() => setContractType(!contractType)}
+            checked={contractType}
           />
           <label htmlFor="cbx" className="cbx"></label>
           <span>
@@ -95,6 +97,11 @@ export const SearchBar = () => {
         <SearchBarMobileFilter
           mobileFilterVisible={mobileFilterVisible}
           setMobileFilterVisible={setMobileFilterVisible}
+          locationSearch={locationSearch}
+          setLocationSearch={setLocationSearch}
+          contractType={contractType}
+          setContractType={setContractType}
+          proceedSearch={proceedSearch}
         />
       )}
     </StyledSearchBarContainer>
