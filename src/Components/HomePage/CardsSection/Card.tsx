@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router";
 
 import {
   StyledCard,
@@ -13,6 +14,7 @@ export const Card = ({
   company,
 }: {
   company: {
+    id: string;
     logoBackground: string;
     logo: string;
     postedAt: string;
@@ -22,8 +24,15 @@ export const Card = ({
     location: string;
   };
 }) => {
+  const toCompanyDetailPage = useNavigate();
+
   return (
-    <StyledCard>
+    <StyledCard
+      onClick={() => {
+        toCompanyDetailPage("/company-detailed-page");
+        localStorage.setItem("CompanyID", company.id);
+      }}
+    >
       <StyledCompanyLogoBox bgcolor={company.logoBackground}>
         <img src={company?.logo} alt="" />
       </StyledCompanyLogoBox>

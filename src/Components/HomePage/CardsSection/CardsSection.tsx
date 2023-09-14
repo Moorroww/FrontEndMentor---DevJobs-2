@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useContext } from "react";
 import axios from "axios";
+
 import { SearchContext } from "../HomePage";
 
 import { Card } from "./Card";
@@ -15,6 +16,7 @@ export const CardsSection = () => {
       contractType: string;
     };
   };
+
   const [companies, setCompanies] = useState([]);
   const [visibleCompanies, setVisibleCompanies] = useState(12);
 

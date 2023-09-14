@@ -10,6 +10,7 @@ import { useDarkMode } from "./Styles/useDarkMode.tsx";
 import { HomePage } from "./Components/HomePage/HomePage";
 import { CompanyDetailPage } from "./Components/CompanyDetailPage/CompanyDetailPage";
 import { ErrorPage } from "./Components/ErrorPage/ErrorPage";
+import { Header } from "./Components/HomePage/Header/Header.tsx";
 
 export const App = () => {
   const [theme, themeToggler] = useDarkMode();
@@ -19,11 +20,9 @@ export const App = () => {
     <ThemeProvider theme={themeMode}>
       <GlobalStyles />
       <Router>
+        <Header toggleTheme={themeToggler} />
         <Routes>
-          <Route
-            path="/"
-            element={<HomePage toggleTheme={themeToggler} />}
-          ></Route>
+          <Route path="/" element={<HomePage />}></Route>
           <Route
             path="/company-detailed-page"
             element={<CompanyDetailPage />}
