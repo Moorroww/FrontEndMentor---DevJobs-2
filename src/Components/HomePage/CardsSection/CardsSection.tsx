@@ -40,7 +40,7 @@ export const CardsSection = () => {
         }
       })}
       {visibleCompanies < companies.length && (
-        <StyledButtonMain onClick={showMore} paddingX="3rem" paddingY="1.6rem">
+        <StyledButtonMain onClick={showMore} paddingx="3rem" paddingy="1.6rem">
           Load More
         </StyledButtonMain>
       )}

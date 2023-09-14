@@ -11,10 +11,10 @@ export const StyledCard = styled.div`
   }
 `;
 
-export const StyledCompanyLogoBox = styled.div<{ bgColor: string }>`
+export const StyledCompanyLogoBox = styled.div<{ bgcolor: string }>`
   width: 5rem;
   height: 5rem;
-  background-color: ${({ bgColor }) => bgColor};
+  background-color: ${({ bgcolor }) => bgcolor};
   border-radius: 1.5rem;
   display: grid;
   place-items: center;

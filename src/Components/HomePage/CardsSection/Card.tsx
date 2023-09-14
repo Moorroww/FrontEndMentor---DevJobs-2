@@ -9,10 +9,22 @@ import {
   StyledShortInfoRow,
 } from "./Card.css";
 
-export const Card = ({ company }) => {
+export const Card = ({
+  company,
+}: {
+  company: {
+    logoBackground: string;
+    logo: string;
+    postedAt: string;
+    contract: string;
+    position: string;
+    company: string;
+    location: string;
+  };
+}) => {
   return (
     <StyledCard>
-      <StyledCompanyLogoBox bgColor={company.logoBackground}>
+      <StyledCompanyLogoBox bgcolor={company.logoBackground}>
         <img src={company?.logo} alt="" />
       </StyledCompanyLogoBox>
       <StyledShortInfoRow>
