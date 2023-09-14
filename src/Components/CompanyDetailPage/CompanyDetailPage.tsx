@@ -4,8 +4,9 @@ import { useNavigate } from "react-router";
 import axios from "axios";
 
 import {
-  CompanyDetailPageContainer,
-  ErrorMessage,
+  StyledCompanyDetailPageContainer,
+  StyledCompanyDetailedHeader,
+  StyledErrorMessage,
 } from "./CompanyDetailPage.css";
 import { StyledButtonMain } from "../_shared/ButtonsAndMisc.css";
 
@@ -28,9 +29,11 @@ export const CompanyDetailPage = () => {
   }, []);
 
   return companyData ? (
-    <CompanyDetailPageContainer></CompanyDetailPageContainer>
+    <StyledCompanyDetailPageContainer>
+      <StyledCompanyDetailedHeader>HEAD</StyledCompanyDetailedHeader>
+    </StyledCompanyDetailPageContainer>
   ) : (
-    <ErrorMessage>
+    <StyledErrorMessage>
       Data loading error :c
       <StyledButtonMain
         paddingx="1.2rem"
@@ -39,6 +42,6 @@ export const CompanyDetailPage = () => {
       >
         Return to main page
       </StyledButtonMain>
-    </ErrorMessage>
+    </StyledErrorMessage>
   );
 };
