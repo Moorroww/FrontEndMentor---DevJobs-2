@@ -45,12 +45,6 @@ export const SearchBar = () => {
     contractType == true
       ? (searchFilter.contractType = "Full")
       : (searchFilter.contractType = "Part");
-
-    setSearchParams({
-      mainSearch: mainSearch,
-      locationSearch: locationSearch,
-      contractType: contractType.toString(),
-    });
   };
 
   return (

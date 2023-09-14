@@ -22,7 +22,7 @@ export const CardsSection = () => {
     axios.get("/data.json").then((res) => {
       setCompanies(res.data);
     });
-  }, []);
+  }, [companies]);
 
   const showMore = () => {
     setVisibleCompanies((prevVisibleCompanies) => prevVisibleCompanies + 12);
