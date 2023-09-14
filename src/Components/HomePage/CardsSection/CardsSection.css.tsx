@@ -5,7 +5,7 @@ export const StyledCardsSectionContainer = styled.section`
   margin-inline: 2.4rem;
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 2.4rem;
+  row-gap: 4.9rem;
 
   & > button {
     max-width: 14.1rem;
@@ -16,7 +16,7 @@ export const StyledCardsSectionContainer = styled.section`
     margin-top: 4.5rem;
     margin-inline: 4rem;
     grid-template-columns: 1fr 1fr;
-    row-gap: 4rem;
+    row-gap: 6.5rem;
     column-gap: 1.1rem;
 
     & > button {
