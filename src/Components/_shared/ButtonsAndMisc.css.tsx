@@ -27,6 +27,7 @@ export const StyledButtonSecondary = styled.button`
   background-color: ${({ theme }) => theme.secondaryButtonBg};
   color: ${({ theme }) => theme.secondaryButtonFont};
   padding: 1.6rem 2rem;
+  font-size: 1.6rem;
   font-weight: bold;
   font-family: inherit;
   border-radius: 0.5rem;
