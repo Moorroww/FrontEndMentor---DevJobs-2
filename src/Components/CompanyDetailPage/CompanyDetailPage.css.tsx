@@ -168,12 +168,6 @@ export const StyledRequirementsBox = styled.div`
   }
 `;
 
-export const StyledWorkDutiesBox = styled.div`
-  & p {
-    color: ${({ theme }) => theme.fontSecondary};
-  }
-`;
-
 export const StyledUl = styled.ul`
   color: ${({ theme }) => theme.fontSecondary};
 
@@ -184,5 +178,87 @@ export const StyledUl = styled.ul`
   }
   & li::marker {
     color: ${({ theme }) => theme.accentViolet};
+  }
+`;
+
+export const StyledWorkDutiesBox = styled.div`
+  & p {
+    color: ${({ theme }) => theme.fontSecondary};
+    margin-bottom: 2.4rem;
+  }
+  & h3 {
+    margin-bottom: 2.4rem;
+  }
+`;
+
+export const StyledOl = styled.ol`
+  color: ${({ theme }) => theme.fontSecondary};
+
+  & li {
+    margin-left: 1.6rem;
+    margin-bottom: 0.8rem;
+    padding-left: 1.6rem;
+  }
+  & li::marker {
+    color: ${({ theme }) => theme.accentViolet};
+    font-weight: bold;
+  }
+`;
+
+export const CardDetailedFooter = styled.footer`
+  background-color: ${({ theme }) => theme.card};
+  width: 100%;
+  height: 9.6rem;
+  position: relative;
+  bottom: -4rem;
+  display: grid;
+  place-items: center;
+  padding-block: 2.3rem;
+
+  & > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  & button {
+    padding-block: 1.6rem;
+    margin-inline: 4rem;
+
+    @media (width>767px) {
+      margin: 0;
+      padding: 1.6rem 2.8rem;
+    }
+  }
+
+  @media (width>767px) {
+    & > div {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding-inline: 4rem;
+    }
+  }
+
+  @media (width>1439px) {
+    & > div {
+      max-width: 730px;
+      padding-inline: 0;
+    }
+  }
+`;
+
+export const StyledFooterCompanyInfo = styled.div`
+  display: none;
+
+  & span {
+    color: ${({ theme }) => theme.fontSecondary};
+  }
+
+  @media (width>767px) {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
   }
 `;

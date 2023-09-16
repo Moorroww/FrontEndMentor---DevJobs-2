@@ -19,6 +19,10 @@ import {
   StyledLargeDescBox,
   StyledRequirementsBox,
   StyledUl,
+  StyledWorkDutiesBox,
+  StyledOl,
+  CardDetailedFooter,
+  StyledFooterCompanyInfo,
 } from "./CompanyDetailPage.css";
 import {
   StyledButtonMain,
@@ -96,7 +100,28 @@ export const CompanyDetailPage = () => {
             ))}
           </StyledUl>
         </StyledRequirementsBox>
+
+        <StyledWorkDutiesBox>
+          <h3>What You Will Do</h3>
+          <p>{companyData?.role.content}</p>
+          <StyledOl>
+            {companyData?.role.items.map((item) => (
+              <li>{item}</li>
+            ))}
+          </StyledOl>
+        </StyledWorkDutiesBox>
       </StyledCompanyDetailDescContainer>
+      <CardDetailedFooter>
+        <div>
+          <StyledFooterCompanyInfo>
+            <h3>{companyData?.position}</h3>
+            <span>{companyData?.company}</span>
+          </StyledFooterCompanyInfo>
+          <StyledButtonMain>
+            <a href={companyData?.apply}>Apply Now</a>
+          </StyledButtonMain>
+        </div>
+      </CardDetailedFooter>
     </StyledCompanyDetailPageContainer>
   ) : (
     <StyledErrorMessage>
