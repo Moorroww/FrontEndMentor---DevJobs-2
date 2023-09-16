@@ -9,8 +9,6 @@ This is a solution to the [Devjobs web app challenge on Frontend Mentor](https:/
   - [Screenshot](#screenshot)
   - [Links](#links)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Git Branches](#git-branches)
 - [Author](#author)
 
@@ -44,31 +42,23 @@ Users should be able to:
 - [Next.js](https://nextjs.org/) - React framework
 - [Styled Components](https://styled-components.com/) - For styles
 
-### What I learned
-
-😬😬😬😬😬😬😬😬
-
-### Continued development
-
-😬😬😬😬😬😬😬😬
-
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- GitHub - [Moorroww](https://github.com/Moorroww/)
+- LinkedIn - [Norbert Adamus](https://www.linkedin.com/in/norbert-adamus-6248291b6)
+- Frontend Mentor - [@Moorroww](https://www.frontendmentor.io/profile/Moorroww)
 
 ## Acknowledgments
 
-😬😬😬😬😬😬😬😬
+Light/Dark mode switch - [uiverse](https://uiverse.io/checkboxes)
 
 ## Git Branches
 
-DevJ-0: Routing, organisation of files etc.  
-DevJ-1: Shared/Reusable Styles, buttons, main top bar (navigation).  
-DevJ-2: Theme configuration.  
-DevJ-3: Search bar main and mobile version.  
-DevJ-4: Company cards rendering.  
-DevJ-5: Search bar logic.  
-DevJ-6: Card detailed page, routing to HomePage onClick -> website logo.  
-DevJ-7: BONUS - Page Transitions with Framer Motion.
+DevJ-0: Routing and organisation of files.✅  
+DevJ-1: Create shered/reusable styles, buttons, main top bar (navigation).✅  
+DevJ-2: Theme configuration.✅  
+DevJ-3: Search bar main and mobile version.✅  
+DevJ-4: Company cards rendering.✅  
+DevJ-5: Search bar logic.✅  
+DevJ-6: Card detailed page, routing to HomePage onClick -> website logo.✅  
+DevJ-7: Page Transitions and cards loading animations with Framer Motion.✅
