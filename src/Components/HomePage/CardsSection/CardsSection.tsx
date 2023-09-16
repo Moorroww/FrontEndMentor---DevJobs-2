@@ -20,7 +20,7 @@ export const CardsSection = () => {
   };
 
   const [companies, setCompanies] = useState([]);
-  const [visibleCompanies, setVisibleCompanies] = useState(12);
+  const [visibleCompanies, setVisibleCompanies] = useState(9);
 
   useEffect(() => {
     axios.get("/data.json").then((res) => {
@@ -29,7 +29,7 @@ export const CardsSection = () => {
   }, [companies]);
 
   const showMore = () => {
-    setVisibleCompanies((prevVisibleCompanies) => prevVisibleCompanies + 12);
+    setVisibleCompanies((prevVisibleCompanies) => prevVisibleCompanies + 5);
   };
 
   return (
