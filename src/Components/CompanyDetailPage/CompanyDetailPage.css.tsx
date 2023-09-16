@@ -34,6 +34,11 @@ export const StyledCompanyDetailedHeader = styled.div`
 
   @media (width>767px) {
     margin-inline: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0;
+    padding-right: 4rem;
   }
 
   @media (width>1439px) {
@@ -53,6 +58,17 @@ export const StyledCompanyLogoBox = styled.div<{ bgcolor: string }>`
   place-items: center;
   position: relative;
   top: -2.5rem;
+
+  @media (width>767px) {
+    position: static;
+    width: 14rem;
+    height: 14rem;
+    border-radius: 0 0 0 1.5rem;
+
+    & img {
+      scale: 2;
+    }
+  }
 `;
 
 export const StyledCompanyNameBox = styled.div`
@@ -69,6 +85,12 @@ export const StyledCompanyNameBox = styled.div`
 
   & span:last-of-type {
     color: ${({ theme }) => theme.fontSecondary};
+  }
+
+  @media (width>767px) {
+    margin-right: auto;
+    margin-left: 4rem;
+    margin-bottom: 0;
   }
 `;
 
