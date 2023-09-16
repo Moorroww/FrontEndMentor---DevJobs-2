@@ -34,7 +34,7 @@ import {
 export const CompanyDetailPage = () => {
   const toMainPage = useNavigate();
 
-  const [companyData, setCompanyData] = useState<Company>(null);
+  const [companyData, setCompanyData] = useState<Company | null>(null);
 
   const findCompanyById = (data: any, companyId: string) => {
     return data.find((company: any) => company.id === parseInt(companyId));

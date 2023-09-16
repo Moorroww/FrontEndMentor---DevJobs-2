@@ -6,6 +6,7 @@ import { SearchBar } from "./SearchBar/SearchBar";
 
 import { HomePageContainer } from "./HomePage.css";
 import { CardsSection } from "./CardsSection/CardsSection";
+
 export const SearchContext = createContext();
 
 export const HomePage = () => {

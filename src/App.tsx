@@ -8,9 +8,6 @@ import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./Styles/theme";
 import { useDarkMode } from "./Styles/useDarkMode.tsx";
 
-import { HomePage } from "./Components/HomePage/HomePage";
-import { CompanyDetailPage } from "./Components/CompanyDetailPage/CompanyDetailPage";
-import { ErrorPage } from "./Components/ErrorPage/ErrorPage";
 import { Header } from "./Components/HomePage/Header/Header.tsx";
 
 export const App = () => {
