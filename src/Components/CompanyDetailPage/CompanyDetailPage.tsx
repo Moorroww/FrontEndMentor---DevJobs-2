@@ -11,7 +11,14 @@ import {
   StyledErrorMessage,
   StyledCompanyLogoBox,
   StyledCompanyNameBox,
-  StyledCompanyDetailDesc,
+  StyledCompanyDetailDescContainer,
+  StyledShortInfoBox,
+  StyledPostTimeAndContractBox,
+  StyledCompanyHugeNameBox,
+  StyledCompanyLocationBox,
+  StyledLargeDescBox,
+  StyledRequirementsBox,
+  StyledUl,
 } from "./CompanyDetailPage.css";
 import {
   StyledButtonMain,
@@ -57,7 +64,39 @@ export const CompanyDetailPage = () => {
         </StyledButtonSecondary>
       </StyledCompanyDetailedHeader>
 
-      <StyledCompanyDetailDesc></StyledCompanyDetailDesc>
+      <StyledCompanyDetailDescContainer>
+        <StyledShortInfoBox>
+          <div>
+            <StyledPostTimeAndContractBox>
+              <span>{companyData?.postedAt}</span>•
+              <span>{companyData?.contract}</span>
+            </StyledPostTimeAndContractBox>
+            <StyledCompanyHugeNameBox>
+              {companyData?.position}
+            </StyledCompanyHugeNameBox>
+            <StyledCompanyLocationBox>
+              {companyData?.location}
+            </StyledCompanyLocationBox>
+          </div>
+          <StyledButtonMain>
+            <a href={companyData?.apply}>Apply Now</a>
+          </StyledButtonMain>
+        </StyledShortInfoBox>
+
+        <StyledLargeDescBox>
+          <p>{companyData?.description}</p>
+        </StyledLargeDescBox>
+
+        <StyledRequirementsBox>
+          <h3>Requirements</h3>
+          <p>{companyData?.requirements.content}</p>
+          <StyledUl>
+            {companyData?.requirements.items.map((item) => (
+              <li>{item}</li>
+            ))}
+          </StyledUl>
+        </StyledRequirementsBox>
+      </StyledCompanyDetailDescContainer>
     </StyledCompanyDetailPageContainer>
   ) : (
     <StyledErrorMessage>

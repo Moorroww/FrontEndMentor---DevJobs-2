@@ -44,7 +44,7 @@ export const StyledCompanyDetailedHeader = styled.div`
   @media (width>1439px) {
     margin-inline: 16.5rem !important;
     width: 100%;
-    max-width: 1110px;
+    max-width: 730px;
     justify-self: center;
   }
 `;
@@ -94,20 +94,95 @@ export const StyledCompanyNameBox = styled.div`
   }
 `;
 
-export const StyledCompanyDetailDesc = styled.div`
+export const StyledCompanyDetailDescContainer = styled.div`
   background-color: ${({ theme }) => theme.card};
   padding: 4rem 2.4rem;
   margin-inline: 2.4rem;
   border-radius: 0.6rem;
+  display: grid;
+  gap: 4rem;
 
   @media (width>767px) {
     margin-inline: 4rem;
+    padding: 4rem 4rem;
   }
 
   @media (width>1439px) {
     margin-inline: 16.5rem !important;
     width: 100%;
-    max-width: 1110px;
+    max-width: 730px;
     justify-self: center;
+  }
+`;
+
+export const StyledShortInfoBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+
+  & button {
+    padding-block: 1.6rem;
+  }
+
+  @media (width>767px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    & button {
+      padding: 1.6rem 2.8rem;
+      width: 100%;
+      max-width: 15.2rem;
+    }
+  }
+`;
+
+export const StyledPostTimeAndContractBox = styled.div`
+  color: ${({ theme }) => theme.fontSecondary};
+  display: flex;
+  gap: 1.2rem;
+`;
+
+export const StyledCompanyHugeNameBox = styled.div`
+  font-size: 2rem;
+  font-weight: bold;
+  margin-block: 0.7rem;
+`;
+
+export const StyledCompanyLocationBox = styled.div`
+  color: ${({ theme }) => theme.accentViolet};
+  font-weight: bold;
+`;
+
+export const StyledLargeDescBox = styled.div`
+  color: ${({ theme }) => theme.fontSecondary};
+`;
+
+export const StyledRequirementsBox = styled.div`
+  & p {
+    color: ${({ theme }) => theme.fontSecondary};
+    margin-bottom: 2.4rem;
+  }
+  & h3 {
+    margin-bottom: 2.4rem;
+  }
+`;
+
+export const StyledWorkDutiesBox = styled.div`
+  & p {
+    color: ${({ theme }) => theme.fontSecondary};
+  }
+`;
+
+export const StyledUl = styled.ul`
+  color: ${({ theme }) => theme.fontSecondary};
+
+  & li {
+    margin-left: 1.6rem;
+    margin-bottom: 0.8rem;
+    padding-left: 1.6rem;
+  }
+  & li::marker {
+    color: ${({ theme }) => theme.accentViolet};
   }
 `;
