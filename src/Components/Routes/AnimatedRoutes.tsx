@@ -12,12 +12,9 @@ export const AnimatedRoutes = () => {
   return (
     <AnimatePresence>
       <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<HomePage />}></Route>
         <Route
-          path="FrontEndMentor---DevJobs-2/"
-          element={<HomePage />}
-        ></Route>
-        <Route
-          path="FrontEndMentor---DevJobs-2/company-detailed-page"
+          path="/company-detailed-page"
           element={<CompanyDetailPage />}
         ></Route>
         <Route path="*" element={<ErrorPage />}></Route>
