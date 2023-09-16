@@ -40,7 +40,7 @@ export const CardsSection = () => {
           company.location.includes(searchFilter.locationSearch) &&
           company.contract.includes(searchFilter.contractType)
         )
-          return <Card company={company} />;
+          return <Card company={company} key={index} cardKey={index} />;
       })}
       {visibleCompanies < companies.length && (
         <StyledButtonMain onClick={showMore} paddingx="3rem" paddingy="1.6rem">

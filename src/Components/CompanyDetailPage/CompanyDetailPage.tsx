@@ -107,8 +107,8 @@ export const CompanyDetailPage = () => {
           <h3>Requirements</h3>
           <p>{companyData?.requirements.content}</p>
           <StyledUl>
-            {companyData?.requirements.items.map((item) => (
-              <li>{item}</li>
+            {companyData?.requirements.items.map((item, index) => (
+              <li key={index}>{item}</li>
             ))}
           </StyledUl>
         </StyledRequirementsBox>
@@ -117,8 +117,8 @@ export const CompanyDetailPage = () => {
           <h3>What You Will Do</h3>
           <p>{companyData?.role.content}</p>
           <StyledOl>
-            {companyData?.role.items.map((item) => (
-              <li>{item}</li>
+            {companyData?.role.items.map((item, index) => (
+              <li key={index}>{item}</li>
             ))}
           </StyledOl>
         </StyledWorkDutiesBox>

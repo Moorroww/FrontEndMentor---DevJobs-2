@@ -13,14 +13,20 @@ import {
   StyledShortInfoRow,
 } from "./Card.css";
 
-export const Card = ({ company }: { company: Company }) => {
+export const Card = ({
+  company,
+  cardKey,
+}: {
+  company: Company;
+  cardKey: number;
+}) => {
   const toCompanyDetailPage = useNavigate();
 
   const cardAnimation = {
     initial: {
       opacity: 0,
     },
-    animate: {
+    enter: {
       opacity: 1,
     },
     exit: {
@@ -33,8 +39,8 @@ export const Card = ({ company }: { company: Company }) => {
       as={motion.div}
       variants={cardAnimation}
       initial="initial"
-      animate="animate"
-      transition={{ delay: 0.12 * company.id }}
+      animate="enter"
+      transition={{ delay: 0.12 * cardKey }}
       onClick={() => {
         toCompanyDetailPage("/company-detailed-page");
         localStorage.setItem("CompanyID", company.id.toString());
