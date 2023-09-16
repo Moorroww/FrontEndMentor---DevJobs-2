@@ -17,7 +17,7 @@ export const StyledMobileFilterContainer = styled.div`
   }
 `;
 
-export const StyledLocationInputLabelMobile = styled.div`
+export const StyledLocationInputLabelMobile = styled.label`
   display: flex;
   align-items: center;
   padding-bottom: 2.4rem;

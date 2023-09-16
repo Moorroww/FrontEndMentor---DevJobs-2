@@ -16,8 +16,7 @@ export const App = () => {
     <ThemeProvider theme={themeMode}>
       <GlobalStyles />
       <Router>
-        <Header toggleTheme={themeToggler} />
-        <AnimatedRoutes />
+        <Header toggleTheme={themeToggler} /> <AnimatedRoutes />
       </Router>
     </ThemeProvider>
   );

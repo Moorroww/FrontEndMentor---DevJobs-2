@@ -1,6 +1,5 @@
 import { useState, useContext } from "react";
 import { SearchContext } from "../HomePage";
-import { useSearchParams } from "react-router-dom";
 
 import {
   StyledButtonsBox,
@@ -34,7 +33,6 @@ export const SearchBar = () => {
   const [mainSearch, setMainSearch] = useState<string>("");
   const [locationSearch, setLocationSearch] = useState<string>("");
   const [contractType, setContractType] = useState<boolean>(false);
-  const [searchParams, setSearchParams] = useSearchParams();
 
   const proceedSearch = (): void => {
     searchFilter.mainSearch = mainSearch;

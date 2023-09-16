@@ -3,14 +3,26 @@ import { createContext } from "react";
 import { motion } from "framer-motion";
 
 import { SearchBar } from "./SearchBar/SearchBar";
-
-import { HomePageContainer } from "./HomePage.css";
 import { CardsSection } from "./CardsSection/CardsSection";
 
-export const SearchContext = createContext();
+import { HomePageContainer } from "./HomePage.css";
+
+interface SearchFilter {
+  mainSearch: string;
+  locationSearch: string;
+  contractType: string;
+}
+
+interface SearchContextType {
+  searchFilter: SearchFilter;
+}
+
+export const SearchContext = createContext<SearchContextType | undefined>(
+  undefined
+);
 
 export const HomePage = () => {
-  const searchFilter = {
+  const searchFilter: SearchFilter = {
     mainSearch: "",
     locationSearch: "",
     contractType: "",
@@ -23,6 +35,7 @@ export const HomePage = () => {
       animate={{ opacity: 1 }}
       exit={{ x: innerWidth * -1, opacity: 0 }}
     >
+      {/* Używamy domyślnego wartości kontekstu */}
       <SearchContext.Provider value={{ searchFilter }}>
         <SearchBar />
         <CardsSection />
