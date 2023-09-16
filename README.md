@@ -70,4 +70,5 @@ DevJ-2: Theme configuration.
 DevJ-3: Search bar main and mobile version.  
 DevJ-4: Company cards rendering.  
 DevJ-5: Search bar logic.  
-DevJ-6: Card detailed page, routing to HomePage onClick -> website logo.
+DevJ-6: Card detailed page, routing to HomePage onClick -> website logo.  
+DevJ-7: BONUS - Page Transitions with Framer Motion.
