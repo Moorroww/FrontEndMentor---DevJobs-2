@@ -1,3 +1,7 @@
+import React from "react";
+
+import { motion } from "framer-motion";
+
 import {
   StyledMobileFilterContainer,
   StyledLocationInputLabelMobile,
@@ -5,21 +9,12 @@ import {
   StyledCheckboxLabel,
   StyledDarkBg,
 } from "./SearchBarMobileFilter.css";
-
 import { StyledInput } from "./SearchBar.css";
-
 import "./checkboxStyle.css";
+
 import locationIcon from "../../../Assets/desktop icons/icon-location.svg";
 
-export const SearchBarMobileFilter = ({
-  mobileFilterVisible,
-  setMobileFilterVisible,
-  locationSearch,
-  setLocationSearch,
-  contractType,
-  setContractType,
-  proceedSearch,
-}: {
+interface SearchBarMobileFilterProps {
   mobileFilterVisible: boolean;
   setMobileFilterVisible: (value: boolean) => void;
   locationSearch: string;
@@ -27,9 +22,23 @@ export const SearchBarMobileFilter = ({
   contractType: boolean;
   setContractType: (value: boolean) => void;
   proceedSearch: () => void;
+}
+
+export const SearchBarMobileFilter: React.FC<SearchBarMobileFilterProps> = ({
+  mobileFilterVisible,
+  setMobileFilterVisible,
+  locationSearch,
+  setLocationSearch,
+  contractType,
+  setContractType,
+  proceedSearch,
 }) => {
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0, zIndex: 20 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <StyledMobileFilterContainer>
         <StyledLocationInputLabelMobile htmlFor="locationFilterMobile">
           <img src={locationIcon} alt="" />
@@ -65,6 +74,6 @@ export const SearchBarMobileFilter = ({
       <StyledDarkBg
         onClick={() => setMobileFilterVisible(!mobileFilterVisible)}
       ></StyledDarkBg>
-    </div>
+    </motion.div>
   );
 };
