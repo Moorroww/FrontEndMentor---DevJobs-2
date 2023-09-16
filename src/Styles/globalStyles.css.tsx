@@ -25,6 +25,8 @@ html {
   background-color: ${({ theme }) => theme.body};
   color: ${({ theme }) => theme.fontMain};
   overflow-x: hidden;
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
 }
 
 body, p {
@@ -56,5 +58,22 @@ h3 {
 h4 {
   font-size: 1.4rem;
   line-height: 1.8rem;
+}
+
+::-webkit-scrollbar {
+  width: .8rem;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: ${({ theme }) => theme.accentViolet};
+  border-radius: .6rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: ${({ theme }) => theme.accentLightViolet};
 }
   `;
