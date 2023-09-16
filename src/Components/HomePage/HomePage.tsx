@@ -1,6 +1,6 @@
 import React, { createContext } from "react";
 
-import { ToggleThemeFunction } from "../../Types/types";
+import { motion } from "framer-motion";
 
 import { SearchBar } from "./SearchBar/SearchBar";
 
@@ -17,7 +17,12 @@ export const HomePage = () => {
   };
 
   return (
-    <HomePageContainer>
+    <HomePageContainer
+      as={motion.div}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ x: innerWidth * -1, opacity: 0 }}
+    >
       <SearchContext.Provider value={{ searchFilter }}>
         <SearchBar />
         <CardsSection />

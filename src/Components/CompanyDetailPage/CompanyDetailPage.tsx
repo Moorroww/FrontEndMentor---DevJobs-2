@@ -3,6 +3,8 @@ import { useNavigate } from "react-router";
 
 import axios from "axios";
 
+import { motion } from "framer-motion";
+
 import { Company } from "../../Types/types";
 
 import {
@@ -32,7 +34,7 @@ import {
 export const CompanyDetailPage = () => {
   const toMainPage = useNavigate();
 
-  const [companyData, setCompanyData] = useState<Company>(null);
+  const [companyData, setCompanyData] = useState<Company | null>(null);
 
   const findCompanyById = (data: any, companyId: string) => {
     return data.find((company: any) => company.id === parseInt(companyId));
@@ -53,7 +55,12 @@ export const CompanyDetailPage = () => {
 
   return companyData ? (
     <StyledCompanyDetailPageContainer>
-      <StyledCompanyDetailedHeader>
+      <StyledCompanyDetailedHeader
+        as={motion.div}
+        initial={{ opacity: 0, x: innerWidth }}
+        animate={{ opacity: 1, x: 0, transition: { delay: 0.5 } }}
+        exit={{ opacity: 0 }}
+      >
         <StyledCompanyLogoBox bgcolor={companyData?.logoBackground}>
           <img src={companyData?.logo} alt="" />
         </StyledCompanyLogoBox>
@@ -68,7 +75,12 @@ export const CompanyDetailPage = () => {
         </StyledButtonSecondary>
       </StyledCompanyDetailedHeader>
 
-      <StyledCompanyDetailDescContainer>
+      <StyledCompanyDetailDescContainer
+        as={motion.div}
+        initial={{ opacity: 0, x: innerWidth }}
+        animate={{ opacity: 1, x: 0, transition: { delay: 0.6 } }}
+        exit={{ opacity: 0 }}
+      >
         <StyledShortInfoBox>
           <div>
             <StyledPostTimeAndContractBox>
