@@ -24,6 +24,7 @@ html {
   justify-content: center; */
   background-color: ${({ theme }) => theme.body};
   color: ${({ theme }) => theme.fontMain};
+  overflow-x: hidden;
 }
 
 body, p {
