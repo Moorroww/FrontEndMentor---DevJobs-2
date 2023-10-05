@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [##](url)
-- Live Site URL: [##](url)
+- Solution URL: [FrontEndMentor](https://www.frontendmentor.io/solutions/devjobs-1st-react-app-T3Vv4KgMmB)
+- Live Site URL: [Vercel](https://front-end-mentor-dev-jobs.vercel.app/)
 
 ## My process
 
